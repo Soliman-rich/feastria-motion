@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= ROOT COLOR SYSTEM ================= */
+
+/* 🎯 غير الرقم الثالث فقط لتفتيح أو تغميق الخلفية */
+:root {
+  --hero-bg: hsl(35, 45%, 95%);
+}
+
+/* ================= RESET ================= */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--hero-bg);
+  font-family: var(--font-primary), sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================= MARQUEE SYSTEM ================= */
+
+/* Wrapper يتحكم بقص النص */
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Track يتحكم بالحركة */
+.marquee-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation: marquee-reverse 24s linear infinite;
+}
+
+/* ================= TEXT STYLING ================= */
+
+/* 🔹 Mobile First */
+.marquee-text-filled,
+.marquee-text-outline {
+  font-weight: 900;
+  font-size: 9vw;
+  line-height: 1;
+  padding-right: 4rem;
+}
+
+/* 🔹 Desktop Scaling */
+@media (min-width: 768px) {
+  .marquee-text-filled,
+  .marquee-text-outline {
+    font-size: 7vw;
+  }
+}
+
+/* السطر الممتلئ */
+.marquee-text-filled {
+  color: #d43c33;
+}
+
+/* السطر المحدد */
+.marquee-text-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px #d43c33;
+}
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
