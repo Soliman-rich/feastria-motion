@@ -58,7 +58,7 @@ export default function Hero() {
 "
     >
       {/* MARQUEE BACKGROUND */}
-      <div className="absolute inset-0 flex flex-col justify-center pointer-events-none select-none">
+      <div className="absolute inset-0 flex flex-col justify-center mt-28  pointer-events-none select-none">
         <div className="marquee-wrapper">
           <div className="marquee-track">
             <h1 className="marquee-text-filled">
@@ -112,40 +112,50 @@ export default function Hero() {
   />
 </div>
 
-        <h1 className="
-          mt-6
-          md:mt-14
-          text-[18px]
-          sm:text-xl
-          md:text-5xl
-          font-semibold
-          text-black
-          leading-snug
-          max-w-[700px]
-        ">
-          Town's favorite stop <br />
-          for burgers & vibes
-        </h1>
+       
 
-        <Link
-          href="/menu"
-          className="
-            mt-6
-            md:mt-10
-            px-8
-            py-3
-            rounded-full
-            border
-            border-black
-            text-black
-            font-medium
-            hover:bg-black
-            hover:text-white
-            transition
-          "
-        >
-          EXPLORE MENU
-        </Link>
+      <Link
+  href="/menu"
+  className="
+  relative
+  mt-12
+  md:mt-10
+  inline-block
+  overflow-hidden
+  rounded-full
+  bg-yellow-400
+  border
+  border-yellow-300
+  px-8
+  py-3
+  font-medium
+  text-[#d83b2d]
+  group
+"
+>
+  <span
+    className="
+    absolute
+    inset-0
+    bg-[#d83b2d]
+    translate-y-full
+    group-hover:translate-y-0
+    transition-transform
+    duration-300
+  "
+  />
+
+  <span
+    className="
+    relative
+    z-10
+    group-hover:text-white
+    transition-colors
+  "
+  >
+    استكشف القائمة
+  </span>
+</Link>
 
       </div>
     </section>

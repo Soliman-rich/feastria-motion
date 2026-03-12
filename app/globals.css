@@ -69,13 +69,13 @@ body {
 
 /* السطر الممتلئ */
 .marquee-text-filled {
-  color: #d43c33;
+  color: rgb(195, 1, 1);
 }
 
 /* السطر المحدد */
 .marquee-text-outline {
   color: transparent;
-  -webkit-text-stroke: 2px #d43c33;
+  -webkit-text-stroke: 2px rgba(212, 1,51, 1);
 }
 
 /* ================= KEYFRAMES ================= */
