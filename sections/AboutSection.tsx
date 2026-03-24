@@ -10,7 +10,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal, Stagger } from "@/lib/motion";
-
+import ButtonPrimary from "@/components/ui/ButtonPrimary";
 export default function AboutSection() {
   return (
     <section>
@@ -67,54 +67,9 @@ export default function AboutSection() {
 
               {/* Button */}
               <Reveal>
-                <Link
-                  href="/about"
-                  className="
-                    relative
-                    inline-block
-                    overflow-hidden
-
-                    px-8
-                    py-4
-                    rounded-full
-                    font-semibold
-
-                    bg-brand-yellow
-                    text-brand-red
-
-                    border-2
-                    border-transparent
-
-                    group
-                  "
-                >
-
-                  {/* Hover Layer */}
-                  <span
-                    className="
-                      absolute
-                      inset-0
-                      bg-brand-red
-                      translate-y-full
-                      group-hover:translate-y-0
-                      transition-transform
-                      duration-300
-                    "
-                  />
-
-                  {/* Text */}
-                  <span
-                    className="
-                      relative
-                      z-10
-                      group-hover:text-white
-                      transition-colors
-                    "
-                  >
-                    معلومات عنا
-                  </span>
-
-                </Link>
+                <ButtonPrimary href="/about">
+                   معلومات عنا
+                </ButtonPrimary>
               </Reveal>
 
             </Stagger>

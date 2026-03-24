@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-
+import ButtonPrimary from "@/components/ui/ButtonPrimary";
 export default function Hero() {
   const burgerRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLElement>(null);
@@ -94,17 +94,10 @@ export default function Hero() {
             className="w-[65vw] max-w-[360px] md:max-w-[520px] h-auto"
           />
         </div>
-
-        <Link
-          href="/menu"
-          className="relative mt-16 inline-block overflow-hidden rounded-full bg-brand-yellow px-8 py-3 font-medium text-brand-red group"
-        >
-          <span className="absolute inset-0 bg-brand-red translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          <span className="relative z-10 group-hover:text-white transition-colors">
-            استكشف القائمة
-          </span>
-        </Link>
-
+        <ButtonPrimary href="/menu" className="mt-16">
+  استكشف القائمة
+</ButtonPrimary>
+        
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import ButtonPrimary from "@/components/ui/ButtonPrimary";
 export default function Header() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -53,49 +53,10 @@ export default function Header() {
             ))}
 
             {/* ================= Contact Button ================= */}
-            <a
-              href="#"
-              className="
-              relative
-              overflow-hidden
-              bg-brand-yellow
-              text-brand-red-dark
-              px-7
-              py-4
-              rounded-full
-              font-semibold
-              border-2
-              border-brand-yellow
-              group
-            "
-            >
+            <ButtonPrimary href="#">
+                     اتصال
+            </ButtonPrimary>
 
-              {/* Hover Layer */}
-              <span
-                className="
-                absolute
-                inset-0
-                bg-brand-red
-                translate-y-full
-                group-hover:translate-y-0
-                transition-transform
-                duration-300
-              "
-              />
-
-              {/* Text */}
-              <span
-                className="
-                relative
-                z-10
-                group-hover:text-white
-                transition-colors
-              "
-              >
-                اتصال
-              </span>
-
-            </a>
 
           </div>
 
