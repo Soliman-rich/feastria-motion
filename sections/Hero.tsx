@@ -83,7 +83,7 @@ export default function Hero() {
       {/* CONTENT */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center pt-8 pb-24 md:pt-10 md:pb-32">
         
-        <div className="mt-6 md:mt-10">
+        <div className="mt-[60px] md:mt-[90px]">
           <Image
             ref={burgerRef as any}
             src="/burger3.avif"
