@@ -1,3 +1,11 @@
+/**
+ * Root Layout
+ * مسؤول عن:
+ * - تحميل الخطوط
+ * - إدراج الهيدر
+ * - تطبيق الإعدادات العامة
+ */
+
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import { Poppins } from "next/font/google";
@@ -20,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="ltr">
-      <body className={`${poppins.variable} font-sans bg-brand-hero`}>
+      <body className={`${poppins.variable} font-sans`}>
         <Header />
         {children}
       </body>

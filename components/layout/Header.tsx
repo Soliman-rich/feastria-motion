@@ -1,28 +1,32 @@
 "use client";
+
 import { useState } from "react";
 
 export default function Header() {
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+
     <header className="w-full relative">
 
       {/* ================= Top Bar ================= */}
-      <div className="bg-brand-yellow text-brand-red text-center text-[10px] font-medium py-[5px]">
+      <div dir="rtl" className="bg-brand-yellow text-brand-red-light text-center text-[15px] font-medium py-[7px]">
         أصبح يوم الجمعة ألذ! استمتع بخصم 30% على كل لقمة في مطعم فيستريا!
       </div>
 
       {/* ================= Main Navbar ================= */}
       <div className="bg-brand-red text-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 py-[14px] flex items-center justify-between">
+
+        <div className="max-w-[1280px] mx-auto px-4 md:px-6 py-5 flex items-center justify-between">
 
           {/* Logo */}
-          <div className="text-[18px] font-medium tracking-wide">
+          <div className="text-[29px] font-medium tracking-wide">
             فيستريا
           </div>
 
           {/* ================= Desktop Navigation ================= */}
-          <div className="hidden md:flex items-center gap-7 text-[15px] font-medium">
+          <div className="hidden md:flex items-center gap-8 text-[16px] font-medium">
 
             {[
               "قائمة طعام",
@@ -30,11 +34,13 @@ export default function Header() {
               "التقييمات",
               "مدونة",
             ].map((item, index) => (
+
               <a
                 key={index}
                 href="#"
                 className="group relative overflow-hidden h-[22px] block"
               >
+
                 <span className="block text-white transition-transform duration-300 ease-in-out group-hover:-translate-y-full">
                   {item}
                 </span>
@@ -42,52 +48,54 @@ export default function Header() {
                 <span className="absolute left-0 top-full block text-brand-yellow transition-transform duration-300 ease-in-out group-hover:-translate-y-full">
                   {item}
                 </span>
+
               </a>
             ))}
 
+            {/* ================= Contact Button ================= */}
             <a
-  href="#"
-  className="
-  relative
-  overflow-hidden
-  bg-brand-yellow
-  text-brand-red
-  px-8
-  py-3
-  rounded-full
-  font-semibold
-  border
-  border-brand-yellow
-  group
-"
->
+              href="#"
+              className="
+              relative
+              overflow-hidden
+              bg-brand-yellow
+              text-brand-red-dark
+              px-7
+              py-4
+              rounded-full
+              font-semibold
+              border-2
+              border-brand-yellow
+              group
+            "
+            >
 
-  {/* Curtain */}
-  <span
-    className="
-    absolute
-    inset-0
-    bg-brand-red
-    translate-y-full
-    group-hover:translate-y-0
-    transition-transform
-    duration-300
-  "
-  />
+              {/* Hover Layer */}
+              <span
+                className="
+                absolute
+                inset-0
+                bg-brand-red
+                translate-y-full
+                group-hover:translate-y-0
+                transition-transform
+                duration-300
+              "
+              />
 
-  {/* Text */}
-  <span
-    className="
-    relative
-    z-10
-    group-hover:text-white
-    transition-colors
-  "
-  >
-    اتصال
-  </span>
+              {/* Text */}
+              <span
+                className="
+                relative
+                z-10
+                group-hover:text-white
+                transition-colors
+              "
+              >
+                اتصال
+              </span>
 
-</a>
+            </a>
 
           </div>
 
@@ -106,6 +114,7 @@ export default function Header() {
 
       {/* ================= Mobile Drawer ================= */}
       {isOpen && (
+
         <div className="md:hidden absolute top-full left-0 w-full bg-brand-red text-white px-6 py-6 space-y-5 z-50 shadow-xl">
 
           {[
@@ -114,6 +123,7 @@ export default function Header() {
             "التقييمات",
             "مدونة",
           ].map((item, index) => (
+
             <a
               key={index}
               href="#"
@@ -122,17 +132,19 @@ export default function Header() {
             >
               {item}
             </a>
+
           ))}
 
           <a
             href="#"
-            className="block bg-brand-yellow text-brand-red text-center py-3 rounded-full font-semibold"
+            className="block bg-brand-yellow text-brand-red-dark text-center py-3 rounded-full font-semibold"
             onClick={() => setIsOpen(false)}
           >
             اتصال
           </a>
 
         </div>
+
       )}
 
     </header>

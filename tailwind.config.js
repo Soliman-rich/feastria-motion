@@ -1,19 +1,28 @@
-/** @type {import('tailwindcss').Config} */
+/** 
+ * Tailwind Configuration
+ * مسؤول عن:
+ * - تحديد أماكن قراءة الكلاسات (content)
+ * - تعريف Design System (الألوان)
+ */
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./sections/**/*.{js,ts,jsx,tsx}", // 🔥 مهم جداً بعد نقل السكشن
   ],
   theme: {
     extend: {
       colors: {
         brand: {
-          red: "#c7352f",
-          yellow: "#f4c542",
-          beige: "#f3e8d8",
+          red: "hsl(var(--brand-red))",
+          "red-light": "hsl(var(--brand-red-light))",
+          "red-lighter": "hsl(var(--brand-red-lighter))",
+          "red-dark": "hsl(var(--brand-red-dark))",
+          yellow: "hsl(var(--brand-yellow))",
         },
       },
     },
   },
   plugins: [],
-}
+};
