@@ -1,11 +1,5 @@
 "use client";
 
-/**
- * Stagger (REAL)
- * مسؤول عن:
- * - توزيع delay على الأطفال
- */
-
 import React from "react";
 
 export default function Stagger({ children }: { children: React.ReactNode }) {
@@ -14,8 +8,13 @@ export default function Stagger({ children }: { children: React.ReactNode }) {
       {React.Children.map(children, (child, index) => {
         if (!React.isValidElement(child)) return child;
 
-        return React.cloneElement(child, {
-          delay: index * 0.2,
+        const element = child as React.ReactElement<any>;
+
+        return React.cloneElement(element, {
+          style: {
+            ...(element.props?.style || {}),
+            animationDelay: `${index * 0.2}s`,
+          },
         });
       })}
     </>

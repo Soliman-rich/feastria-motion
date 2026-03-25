@@ -4,14 +4,16 @@
  * - عرض السكشنات
  */
 
-import Hero from "@/sections/Hero";
-import AboutSection from "@/sections/AboutSection";
+import Hero from "@/features/home/Hero";
+import AboutSection from "@/features/home/AboutSection";
+import FavoritesSection from "@/features/home/FavoritesSection";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <AboutSection />
-    </main>
+      <FavoritesSection/>
+    </>
   );
 }

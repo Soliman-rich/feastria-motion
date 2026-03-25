@@ -6,11 +6,11 @@
  */
 
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./sections/**/*.{js,ts,jsx,tsx}", // 🔥 مهم جداً بعد نقل السكشن
-  ],
+ content: [
+  "./app/**/*.{js,ts,jsx,tsx}",
+  "./components/**/*.{js,ts,jsx,tsx}",
+  "./features/**/*.{js,ts,jsx,tsx}", // 🔥 هذا المهم
+],
   theme: {
     extend: {
       colors: {
